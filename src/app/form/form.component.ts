@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormService } from '../services/form.service';
 
 @Component({
     selector: 'app-form',
@@ -7,13 +8,23 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
     styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-    constructor(public fb: FormBuilder) { }
+    profileForm: FormGroup;
 
-    profileForm = this.fb.group({
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-    });
-
+    constructor(public fb: FormBuilder, private formDataService: FormService) {
+        this.profileForm = this.fb.group({
+            firstName: new FormControl(''),
+            lastName: new FormControl(''),
+        });
+        this.formDataService.profileForm = this.profileForm;
+    }
     ngOnInit() {
+        console.log("FormComponent this.profileForm", this.profileForm);
+    }
+    search() {
+        // Perform your search logic here
+        // ...
+
+        // Trigger the search event
+        this.formDataService.triggerSearch();
     }
 }
