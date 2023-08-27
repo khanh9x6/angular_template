@@ -3,19 +3,11 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppLayoutModule } from './layout/app.layout.module';
-import { NotfoundComponent } from './demo/components/notfound/notfound.component';
-import { ProductService } from './demo/service/product.service';
-import { CountryService } from './demo/service/country.service';
-import { CustomerService } from './demo/service/customer.service';
-import { EventService } from './demo/service/event.service';
-import { IconService } from './demo/service/icon.service';
-import { NodeService } from './demo/service/node.service';
-import { PhotoService } from './demo/service/photo.service';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent, FormComponent
+        AppComponent, FormComponent
     ],
     imports: [
         AppRoutingModule,
@@ -24,7 +16,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
         FormsModule
     ],
     providers: [
-        { provide: LocationStrategy, useClass: PathLocationStrategy }, IconService
+        { provide: LocationStrategy, useClass: PathLocationStrategy }
     ],
     bootstrap: [AppComponent]
 })
