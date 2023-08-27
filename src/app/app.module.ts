@@ -21,9 +21,7 @@ import { PhotoService } from './demo/service/photo.service';
         AppLayoutModule
     ],
     providers: [
-        { provide: LocationStrategy, useClass: PathLocationStrategy },
-        CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService
+        { provide: LocationStrategy, useClass: PathLocationStrategy }, IconService
     ],
     bootstrap: [AppComponent]
 })

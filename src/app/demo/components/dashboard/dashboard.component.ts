@@ -20,15 +20,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     subscription!: Subscription;
 
-    constructor(private productService: ProductService, public layoutService: LayoutService) {
+    constructor(public layoutService: LayoutService) {
         this.subscription = this.layoutService.configUpdate$.subscribe(() => {
-            this.initChart();
+            // this.initChart();
         });
     }
 
     ngOnInit() {
         this.initChart();
-        this.productService.getProductsSmall().then(data => this.products = data);
+        // this.productService.getProductsSmall().then(data => this.products = data);
 
         this.items = [
             { label: 'Add New', icon: 'pi pi-fw pi-plus' },
