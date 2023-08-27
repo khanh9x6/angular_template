@@ -1,1 +1,1 @@
-ng serve --port 4444
+ng serve --port 4444 --open
