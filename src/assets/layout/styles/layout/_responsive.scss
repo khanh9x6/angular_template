@@ -11,8 +11,7 @@
     .layout-wrapper {
         &.layout-overlay {
             .layout-main-container {
-                margin-left: 0;
-                padding-left: 0.5rem;
+                margin-left: 1rem;
             }
 
             .layout-sidebar {
@@ -33,7 +32,7 @@
 
         &.layout-static {
             .layout-main-container {
-                margin-left: 160px;
+                margin-left: 230px;
             }
 
             &.layout-static-inactive {
@@ -43,8 +42,8 @@
                 }
 
                 .layout-main-container {
-                    margin-left: 0;
-                    padding-left: 0.5rem;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
                 }
             }
         }
@@ -62,8 +61,7 @@
 
     .layout-wrapper {
         .layout-main-container {
-            margin-left: 0;
-            padding-left: 0.5rem;
+            margin-left: 1rem;
         }
 
         .layout-sidebar {

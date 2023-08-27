@@ -11,14 +11,17 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
-
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent
+        AppComponent, NotfoundComponent, FormComponent
     ],
     imports: [
         AppRoutingModule,
-        AppLayoutModule
+        AppLayoutModule,
+        ReactiveFormsModule,
+        FormsModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy }, IconService
